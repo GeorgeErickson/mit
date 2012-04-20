@@ -1,0 +1,4 @@
+mit
+===
+
+My class work
