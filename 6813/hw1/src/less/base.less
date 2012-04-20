@@ -1,0 +1,51 @@
+@import "bootstrap/bootstrap.less";
+.red {
+  color: @red;
+}
+.blue {
+  color: @blue;
+}
+
+.header {
+  width: 960px;
+  margin: 20px 0;
+  .score_holder {
+    cursor: pointer;
+  }
+  h1 {
+
+    display: inline-block;
+    margin-right: 20px;
+  }
+  div.btn-group {
+    display: inline-block;
+    top: 4px;
+  }
+}
+.main-content {
+  width: 960px;
+  .user-input {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+  .correct {
+    h3 {
+      color: @blue;
+    }
+    i {
+      color: @blue;
+      margin-top: 6px;
+    }
+  }
+  .wrong {
+    h3 {
+      color: @red;
+    }
+  }
+}
+

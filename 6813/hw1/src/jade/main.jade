@@ -1,0 +1,49 @@
+div.header.row
+  div.span6
+    h1 Translate
+    div.btn-group
+      a(data-toggle="dropdown").btn.dropdown-toggle
+        | from 
+        b.js_from
+        | 
+        | to 
+        b.js_to
+        | 
+        span.caret
+      ul.dropdown-menu#drop_option
+  div(rel="popover", data-content="Score is calculated by subtracting the number of incorrect responses from the number of correct responses", data-original-title="Help", data-placement="bottom").span2.offset4.score_holder 
+    h2 Score: 
+      span#score 0  
+div.row.well.main-content
+  div.span12
+    div.row.user-input#js_answer_after
+      div.span4
+        h2.js_from Spanish
+        h3#js_random_word espejo
+      div.span4
+        h2.js_to English
+        input(type='text', placeholder='English', autofocus)#js_input
+      div.span4
+        h2 Answer
+        button(onclick='app.dom.answer_click();').btn.btn-primary See Answer
+//templates
+div#t-correct.hide
+  div.row.correct
+    h3.span4 {{word_from}}
+    h3.span4 {{word_correct}}
+    i.span4 &#10004;
+div#t-wrong.hide    
+  div.row.wrong
+    h3.span4 {{word_from}}
+    h3.span4 {{word_wrong}}
+    h3.span4 {{word_correct}}
+div#t-dropdown.hide
+  {{#options}}
+  li(onclick='app.dom.change_lang("{{to}}", "{{from}}");')
+    a
+      | from 
+      b {{from}}
+      | 
+      | to 
+      b {{to}}
+  {{/options}}

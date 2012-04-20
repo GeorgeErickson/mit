@@ -1,0 +1,13 @@
+<!DOCTYPE html><!-- 
+COLLABORATORS:None
+Look at src/jade for more readable html
+--><html><head><title>translate</title><meta http-equiv="Content-Type" content="text/html, charset=utf-8"><meta name="author" content="George Erickson"><link rel="stylesheet" href="base.css"></head><body><div class="container"><div class="header row"><div class="span6"><h1>Translate</h1><div class="btn-group"><a data-toggle="dropdown" class="btn dropdown-toggle">from 
+<b class="js_from"></b> 
+to 
+<b class="js_to"></b> 
+<span class="caret"></span></a><ul id="drop_option" class="dropdown-menu"></ul></div></div><div rel="popover" data-content="Score is calculated by subtracting the number of incorrect responses from the number of correct responses" data-original-title="Help" data-placement="bottom" class="span2 offset4 score_holder"><h2>Score: <span id="score">0  </span></h2></div></div><div class="row well main-content"><div class="span12"><div id="js_answer_after" class="row user-input"><div class="span4"><h2 class="js_from">Spanish</h2><h3 id="js_random_word">espejo</h3></div><div class="span4"><h2 class="js_to">English</h2><input type="text" placeholder="English" autofocus id="js_input"></div><div class="span4"><h2>Answer</h2><button onclick="app.dom.answer_click();" class="btn btn-primary">See Answer</button></div></div></div></div><!--templates--><div id="t-correct" class="hide"><div class="row correct"><h3 class="span4">{{word_from}}</h3><h3 class="span4">{{word_correct}}</h3><i class="span4">&#10004;</i></div></div><div id="t-wrong" class="hide"><div class="row wrong"><h3 class="span4">{{word_from}}</h3><h3 class="span4">{{word_wrong}}</h3><h3 class="span4">{{word_correct}}</h3></div></div><div id="t-dropdown" class="hide">{{#options}}
+<li onclick="app.dom.change_lang(&quot;{{to}}&quot;, &quot;{{from}}&quot;);"><a>from 
+<b>{{from}}</b> 
+to 
+<b>{{to}}</b></a></li>{{/options}}
+</div></div><script src="lib/jquery-1.7.1.min.js"></script><script src="lib/hogan-1.0.5.js"></script><script src="lib/compat.js"></script><script src="lib/dicts.json"></script><script src="translate_game.js"></script></body></html>

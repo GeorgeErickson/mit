@@ -1,0 +1,22 @@
+#6.813 people
+The build directory is probably what you care about
+
+
+# Code Layout
+The src directory contains the code I have written in three separate parts
+1. Less -> compiles to build/base.css (also includes Twitter Bootstrap library)
+2. Jade -> compiles to build/translate_game.html
+3. coffee -> compiles to build/translate_game.js
+
+# Development Requirements - talk to george(george@kyru.us) if you need help
+1. node.js (brew install node)
+2. npm (currently comes with node)
+3. less (npm install -g less)
+4. jade (npm install -g jade)
+5. coffeescript (npm install -g coffee-script)
+6. watchr (sudo gem install watchr)
+
+# Developing
+1. Run "watchr watch.rb" from main project directory
+2. Edit files - on save the generated output will be created
+3. If you add a new file you have to restart the watchr script
